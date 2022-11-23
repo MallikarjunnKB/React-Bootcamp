@@ -31,7 +31,6 @@ const heading = (<div id="title" className='title-class' tabIndex={1}>
 
 const TitleComponent = () => <h1>Namaste React Bootcamp</h1>
 
-
 const HeadingComponent = () => {
     return (
         <div id="title" className='title-class' tabIndex={1}>
