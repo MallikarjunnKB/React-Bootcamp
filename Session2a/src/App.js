@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './style.css'
+import './style.css';
+import logo from './images/logo.png' 
 
 // const heading = React.createElement("h1", { id: 'title' }, "Hello World"); //basic react element
 //Element -> Object -> HTML (h1)
@@ -30,11 +31,12 @@ const heading = (<div id="title" className='title-class' tabIndex={1}>
 
 const TitleComponent = () => <h1>Namaste React Bootcamp</h1>
 
-
 const HeadingComponent = () => {
     return (
         <div id="title" className='title-class' tabIndex={1}>
            <TitleComponent/>
+           <img src={logo} alt="Logo" height={100} width={100} />
+           <input type="text" placeholder="search here..."/>
             <h2>from zero to hero</h2>
             <h3>in {noOfMonths} months</h3>
         </div>
