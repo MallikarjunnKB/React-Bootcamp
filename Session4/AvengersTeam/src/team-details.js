@@ -69,7 +69,7 @@ export default Avengers = [
       name: "Roshan Trivedi",
       place: "Muzaffarpur, Bihar",
       company: "Infosys",
-      designation: "",
+      designation: "Software Engineer",
     },
     {
       id: "10",
@@ -77,7 +77,7 @@ export default Avengers = [
       name: "Vijesh N K",
       place: "Mangalore, Karnataka",
       company: "Pace wisdom solutions",
-      designation: "",
+      designation:"Software Engineer",
     },
   ];
   
