@@ -1,0 +1,34 @@
+#header {
+    text-align: center;
+}
+
+#header>img {
+    width: 1520px;
+    height: 400px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    border: 1px solid black;
+    padding: 10px;
+    width: 200px;
+    flex: 33%;
+    margin: 5px;
+    text-align: center;
+}
+
+
+.card>img {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
