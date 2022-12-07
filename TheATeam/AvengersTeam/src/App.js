@@ -1,15 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import './style.css'
-import CardComponent from "./CardComponent";
-import './team-details'
+import CardComponent from "./components/CardComponent";
+import data from './utils/data.json';
+import { title } from "./utils/constants";
+import SearchBar from "./components/SearchBar";
 
 
 const HeadingComponent = () => {
     return (
         <div id="header">
-            <h1> The Avengers </h1>
-            <img src="https://wallpapercave.com/wp/6lvp4zT.jpg" />
+            <h1> {title} </h1>
+            <img src="https://i.pinimg.com/originals/a3/aa/c7/a3aac7594fccac4afbc27598bd9917d8.jpg" />
         </div>
     )
 }
@@ -17,7 +19,7 @@ const HeadingComponent = () => {
 const CardContainer = () => {
     return (
         <div className="card-container">
-            {Avengers.map((member, i) => {
+            {data.map((member, i) => {
                 return (
                     <CardComponent key={member.id} data={member} />
                 )
@@ -27,8 +29,9 @@ const CardContainer = () => {
 }
 
 
-const BodyComponent = () => (
+const SearchPageComponent = () => (
     <div>
+        <SearchBar />
         <CardContainer />
     </div>
 )
@@ -37,7 +40,7 @@ const AppLayout = () => {
     return (
         <div>
             <HeadingComponent />
-            <BodyComponent />
+            <SearchPageComponent />
         </div>
     )
 }
