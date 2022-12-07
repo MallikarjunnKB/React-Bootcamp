@@ -4,7 +4,7 @@
 
 #header>img {
     width: 1520px;
-    height: 400px;
+    height: 300px;
 }
 
 .card-container {
@@ -18,17 +18,23 @@
     border: 1px solid black;
     padding: 10px;
     width: 200px;
-    flex: 33%;
+    flex: 15%;
     margin: 5px;
+    margin-bottom: 0%;
     text-align: center;
 }
 
 
 .card>img {
-    width: 400px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     display: block;
     margin-left: auto;
     margin-right: auto;
    
+}
+
+.search{
+    margin: auto;
+    display: block;
 }

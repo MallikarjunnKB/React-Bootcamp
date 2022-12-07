@@ -1,0 +1,82 @@
+[
+    {
+      "id": "1",
+      "imageSrc": "https://wallpaperaccess.com/full/1115168.jpg",
+      "name": "Ajay Pathak",
+      "place": "Gurugram, Haryana",
+      "company": "Naehas Inc",
+      "designation": "Frontend Developer"
+    },
+    {
+      "id": "2",
+      "imageSrc": "https://cellularnews.com/wp-content/uploads/2020/06/103-avengers-infinity-war-character-poster-hulk-325x485.jpg",
+      "name": "Balaji Gaikwad",
+      "place": "Pune, Maharashtra",
+      "company": "Nice Ltd",
+      "designation": "Senior Software Engineer"
+    },
+    {
+      "id": "3",
+      "imageSrc": "https://wallpaperaccess.com/full/7882551.jpg",
+      "name": "Chaitra J",
+      "place": "Bengaluru, Karnataka",
+      "company": "Wells Fargo",
+      "designation": "Senior Software Engineer"
+    },
+    {
+      "id": "4",
+      "imageSrc": "https://c4.wallpaperflare.com/wallpaper/535/901/196/the-avengers-avengers-endgame-avengers-endgame-iron-man-marvel-comics-hd-wallpaper-preview.jpg",
+      "name": "Gourav Goswami",
+      "place": "Madhya Pradesh",
+      "company": "Toschi Infotech",
+      "designation": "Frontend Developer"
+    },
+    {
+      "id": "5",
+      "imageSrc": "https://wallpapercave.com/wp/wp6573883.jpg",
+      "name": "Kirti Sahai",
+      "place": "New Delhi",
+      "company": "Kongsberg Digital",
+      "designation": "Senior Frontend Developer"
+    },
+    {
+      "id": "6",
+      "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsyBWuDESo54wcGvPQmQBk9KNE9YYDgQUcwQ&usqp=CAU",
+      "name": "Laxmi Waghmore",
+      "place": "Mumbai, Maharashtra",
+      "company": "Cognizant",
+      "designation": "Frontend Developer"
+    },
+    {
+      "id": "7",
+      "imageSrc": "https://c4.wallpaperflare.com/wallpaper/817/500/937/avengers-infinity-war-chris-evans-steve-rogers-captain-america-wallpaper-preview.jpg",
+      "name": "Mallikarjun K Basavanagowdra",
+      "place": "Bengaluru, Karnataka",
+      "company": "William O'Neil India",
+      "designation": "Software Engineer"
+    },
+    {
+      "id": "8",
+      "imageSrc": "https://c4.wallpaperflare.com/wallpaper/653/357/294/avengers-infinity-war-letitia-wright-shuri-4k-wallpaper-preview.jpg",
+      "name": "Pujarini Jena",
+      "place": "Gurugram, Haryana",
+      "company": "CARS24",
+      "designation": "Software Engineer"
+    },
+    {
+      "id": "9",
+      "imageSrc": "https://c4.wallpaperflare.com/wallpaper/756/359/805/movies-the-avengers-hawkeye-jeremy-renner-wallpaper-preview.jpg",
+      "name": "Roshan Trivedi",
+      "place": "Muzaffarpur, Bihar",
+      "company": "Infosys",
+      "designation": "Software Engineer"
+    },
+    {
+      "id": "10",
+      "imageSrc": "https://images.hdqwalls.com/wallpapers/tom-holland-spider-man-no-way-home-4k-fk.jpg",
+      "name": "Vijesh N K",
+      "place": "Mangalore, Karnataka",
+      "company": "Pace wisdom solutions",
+      "designation":"Software Engineer"
+    }
+  ]
