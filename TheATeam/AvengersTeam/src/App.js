@@ -7,6 +7,10 @@ import { title } from "./utils/constants";
 import SearchBar from "./components/SearchBar";
 import NoResultsComponent from "./components/NoResultsComponent";
 import userData from './utils/userData.json'
+import { createBrowserRouter, Outlet, RouterProvider,Link } from 'react-router-dom'
+import AboutUs from "./components/AboutUs";
+import ErrorComponent from "./components/ErrorComponent";
+import MemberComponent from "./components/MemberComponent";
 
 
 const HeadingComponent = () => {
@@ -25,7 +29,9 @@ const CardContainer = ({ teamData }) => (
             <div className="card-container">
                 {teamData.map((member, i) => {
                     return (
-                        <CardComponent key={member.id} data={member} />
+                        <Link to={`/member/${member.id}`}>
+                            <CardComponent key={member.id} data={member} />
+                        </Link>
                     )
                 })}
             </div>
@@ -66,12 +72,33 @@ const AppLayout = () => {
     return (
         <div>
             <HeadingComponent />
-            <SearchPageComponent />
+            <Outlet />
         </div>
     )
 }
 
+const appRoot = createBrowserRouter([
+    {
+        path: "/",
+        element: <AppLayout />,
+        errorElement: <ErrorComponent />,
+        children: [
+            {
+                path: "/member/:id",
+                element: <MemberComponent />
+            },
+            {
+                path: "/search",
+                element: <SearchPageComponent />
+            }
+        ]
+    },
+    {
+        path: "/about-us",
+        element: <AboutUs />
+    }
+])
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />)
+root.render(<RouterProvider router={appRoot} />)

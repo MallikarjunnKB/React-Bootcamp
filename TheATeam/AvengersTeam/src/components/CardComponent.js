@@ -1,5 +1,5 @@
 const CardComponent = (props) => {
-    const { name, bio, avatar_url,company } = props.data
+    const { name, bio, avatar_url,company } = props?.data
    
     return (
         <div className="card">
