@@ -18,17 +18,19 @@ const HeadingComponent = () => {
     )
 }
 
-const CardContainer = ({teamData}) => {
-    return (
-        <div className="card-container">
-            {teamData.map((member, i) => {
-                return (
-                    <CardComponent key={member.id} data={member} />
-                )
-            })}
-        </div>
-    )
-}
+const CardContainer = ({ teamData }) => (
+    !teamData.length ?
+        (<NoResultsComponent />)
+        : (
+            <div className="card-container">
+                {teamData.map((member, i) => {
+                    return (
+                        <CardComponent key={member.id} data={member} />
+                    )
+                })}
+            </div>
+        )
+)
 
 
 const SearchPageComponent = () => {
@@ -39,22 +41,23 @@ const SearchPageComponent = () => {
         fetchTeamData();
     }, [])
 
-    async function fetchTeamData (){
+    async function fetchTeamData() {
         const team = [];
-        for(let i=0;i<userData.length;i++){
+        for (let i = 0; i < userData.length; i++) {
             const data = await fetch(`https://api.github.com/users/${userData[i].username}`);
             const json = await data.json();
             team.push(json);
         }
-        console.log('team',team)
+        console.log('team', team)
         setTeamData(team);
+        setFilteredTeam(team)
     }
 
 
     return (
         <div>
             <SearchBar teamData={teamData} setFilteredTeam={setFilteredTeam} />
-            <CardContainer teamData={filteredTeam.length ? filteredTeam : teamData} />
+            <CardContainer teamData={filteredTeam} />
         </div>
     )
 }
