@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import './style.css'
 import CardComponent from "./components/CardComponent";
 import data from './utils/data.json';
 import { title } from "./utils/constants";
 import SearchBar from "./components/SearchBar";
+import NoResultsComponent from "./components/NoResultsComponent";
+import userData from './utils/userData.json'
 
 
 const HeadingComponent = () => {
@@ -16,10 +18,10 @@ const HeadingComponent = () => {
     )
 }
 
-const CardContainer = () => {
+const CardContainer = ({teamData}) => {
     return (
         <div className="card-container">
-            {data.map((member, i) => {
+            {teamData.map((member, i) => {
                 return (
                     <CardComponent key={member.id} data={member} />
                 )
@@ -29,12 +31,33 @@ const CardContainer = () => {
 }
 
 
-const SearchPageComponent = () => (
-    <div>
-        <SearchBar />
-        <CardContainer />
-    </div>
-)
+const SearchPageComponent = () => {
+    const [teamData, setTeamData] = useState([]);
+    const [filteredTeam, setFilteredTeam] = useState([]);
+
+    useEffect(() => {
+        fetchTeamData();
+    }, [])
+
+    async function fetchTeamData (){
+        const team = [];
+        for(let i=0;i<userData.length;i++){
+            const data = await fetch(`https://api.github.com/users/${userData[i].username}`);
+            const json = await data.json();
+            team.push(json);
+        }
+        console.log('team',team)
+        setTeamData(team);
+    }
+
+
+    return (
+        <div>
+            <SearchBar teamData={teamData} setFilteredTeam={setFilteredTeam} />
+            <CardContainer teamData={filteredTeam.length ? filteredTeam : teamData} />
+        </div>
+    )
+}
 
 const AppLayout = () => {
     return (

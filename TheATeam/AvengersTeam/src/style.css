@@ -36,5 +36,7 @@
 
 .search{
     margin: auto;
+    width: 20%;
     display: block;
+    padding: 10px;
 }
